@@ -1,7 +1,7 @@
 # Preamble
 
 
-It is beer to have 100 functions operate on one datastructure than
+It is better to have 100 functions operate on one data structure than
 to have 10 functions operate on 10 data structures.
 
 The goal is is that students who complete this subject should have agood
