@@ -1,17 +1,22 @@
-# Higher Order Procedures
+# Higher Order Functions
 
-Higher order procedures are useful for many things,
-at the moment they can be used for:
+Higher Order Functions (or Procedures) are functions who do at least
+one of the following:
+- **takes one or more functions as arguments** (i.e. procedural parameters);
+- **returns a function** as its result.
+
+Higher order procedures are useful for many things, at the moment we
+will use them for:
 - abstracting functions;
 - generate other functions;
 
-Think about the sum higher order function.  We have both a very general
-function which can be used by itself but also a tool to generate other
-more specific functions, for example functions generating very specific
-series or sequences.
+As an example let's think about the summation symbol in mathematics as an
+higher order function.  We have both a very general function which can be
+used by itself but also a tool to generate other more specific functions,
+for example functions generating very specific series or sequences.
 
 
-## Example of usage of Higher Order Functions
+## Example of Higher Order Function accepting functions as arguments
 
 Let's say that we have these three functions:
 ```scheme
@@ -59,7 +64,7 @@ a pattern that can be summarized by a higher order function.
 In this case next and term are functions which have to be passed.
 We have somewhat captured the general pattern from the previous procedure.
 At this point we can either use this abstraction or use it to generate functions.
-Let's try to generate the previous function starting from the new `(sum)` function.
+Let's try to generate the previous functions starting from the new `sum` function.
 
 ```scheme
 ;; sum-int redefined using higher order function "sum"
@@ -83,3 +88,83 @@ Let's try to generate the previous function starting from the new `(sum)` functi
          (lambda (i)(+ i 4))                ; we step by 4 step per time
          (lambda (i)(/ 1 (* i(+ i 2))))))
 ```
+
+## Example of Higher Order Function returning functions
+
+Let's try another alternative method to compute the square root
+of a number by using the fixed-point concept.
+The **fixed-point concept** is a concept by which we use the same function
+over and over converging to a value and stop only when the difference
+between subsequent values is below a certain threshold.
+Some functions have this property that we can find their fixed point
+if we iterate the function enough on any number (.e.,g f(f(f(f(f(f(f(x))))))) ).
+For example the cosine function has this kind of behaviour, if we
+for example take the cosine of the cosine of the cosine of the cosine...
+of any number `x` we get a number close to `0.739`; and indeed if we
+compute `cosine(0.739)` we exactly get `0.739`.
+
+Basically the square root computed by Heron method is based on the fixed
+point concept. Where our fixed point function was `f = (y + (x / y)) / 2`
+or expressed in lisp terms `(/ (+ y (/ x y)) 2)`.
+So using the heron method to compute the square is basically the same
+as searching for the **fixed-point of the function f**.
+Indeed if we compute (f(sqrt(x))) we get (sqrt(x)).
+
+We can nicely express these ideas by building up abstractions using
+higher order functions.
+
+```scheme
+(define (sqrt x)
+    (fixed-point (lambda (y) (average (/ x y) y))
+                 1))
+
+;; iterative procedure to commpute the fixed point
+(define (fixed-point f start)
+    (define tolerance 0.00001)
+    (define (close-enough? u v)
+        (< (abs (- u v)) tolerance))
+    (define (iter old new)
+        (if (close-enough? old new)
+            new
+            (iter new (f new))))
+    (iter start (f start)))
+
+```
+This can be expressed in a clearer way, if we consider as fixed-point
+function for finding the square root `(/ x y)` indeed when `y` is
+`sqrt(x)` then the function assumes the value `sqrt(x)`, there is just
+one problem, that this function oscillates with certain values, and that's
+why we previously were using the other adjusted fixed-point function.
+Let's try to express this idea with functions.
+
+```scheme
+(define (sqrt x)
+    (fixed-point
+        (average-damp (lambda (y) (/ x y)))
+        1))
+
+
+;; now average-damp is a procedure which takes a procedure
+;; as its argument and returns a procedure as its value
+(define (average-damp f)
+    (lambda (x) (average (f x) x))) 
+
+;; this is the return of an anonymous function
+;; we could have also returned a named function
+;; by doing:
+;; (define (foo x)
+;;      (average (f x) x)
+;;  foo)
+```
+
+
+## Functions as First-Class Citizens
+
+Throughout this course we will support the ideas of Christopher Strachey,
+one of the grandfathers of computer science who was a big advocate for
+making functions first-class citizens in a programming language.
+This means that functions have the following rights/privileges:
+- to be named by variables;
+- to be passed as arguments to procedures;
+- to be returned as values of procedures;
+- to be incorporated into data structures;
