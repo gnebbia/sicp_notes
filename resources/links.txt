@@ -1,1 +1,2 @@
-https://berkeley-cs61as.github.io/textbook.html
+https://berkeley-cs61as.github.io/textbook.html (alternative modern berkeley course textbook)
+https://billthelizard.blogspot.com/2011/07/sicp-lecture-3a-henderson-escher.html (notes and explanations of SICP lectures)
