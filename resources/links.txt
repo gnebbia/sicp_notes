@@ -1,2 +1,14 @@
 https://berkeley-cs61as.github.io/textbook.html (alternative modern berkeley course textbook)
 https://billthelizard.blogspot.com/2011/07/sicp-lecture-3a-henderson-escher.html (notes and explanations of SICP lectures)
+https://www.youtube.com/watch?v=OyfBQmvr2Hc (William Byrd, The most Beautiful Program Ever Written)
+
+- The Little Schemer by Daniel P. Friedman and Matthias Felleisen 
+- Essentials of Programming Languages by Daniel P. Friedman and Mitchell Wand 
+- John McCarthy's Recursive functions of symbolic expressions and their computation by machine, Part I  
+- LISP 1.5 Programmer's Manual by John McCarthy, Paul W. Abrahams, Daniel J. Edwards, Timothy P. Hart and Michael I. Levin (see especially page 13!) 
+ - John McCarthy's A micro-manual for LISP - not the whole truth 
+ - "Maxwell's equations of software" examined by Ken Shirriff 
+ - Lisp as the Maxwell’s equations of software by Michael Nielsen 
+ - miniKanren, live and untagged: quine generation via relational interpreters (programming pearl) by William E. Byrd, Eric Holk, and Daniel P. Friedman 
+ - The Reflective Language Black by Asai, Kenichi 
+ - Programming Should Eat Itself by Nada Amin, Strange Loop, 2014 
