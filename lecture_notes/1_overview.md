@@ -14,6 +14,11 @@ computers just because it is a relatively new field.
 This happened with geometry too, when egyptians were using it to
 understand what was the impact of Nile flooding.
 
+Generally speaking, computer science answers the following questions:
+
+- What can we compute?
+- How do we compute it?
+- What can we do with that?
 
 
 # Computer Science/Engineering
@@ -52,7 +57,7 @@ In order to do this we have to understand:
 - Means of Combination 
     - Procedure Combination;
     - Construction of Compound Data;
-- Means of Abstrction
+- Means of Abstraction
     - Procedure Definition
     - Simple Data Abstraction
 - Capturing Common Patterns
