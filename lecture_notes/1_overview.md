@@ -26,7 +26,7 @@ Generally speaking, computer science answers the following questions:
 Computer Engineering is a very abstract field, and can deal with
 a huge amount of complexity. Hence we need ways to work with complexity.
 
-The pillar **technigues for controlling and managing complexity** in
+The pillar **techniques for controlling and managing complexity** in
 computer engineering are:
 - Black-Box Abstraction;
 - Conventional Interfaces;
