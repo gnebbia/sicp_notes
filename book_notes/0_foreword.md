@@ -29,5 +29,5 @@ know;
 - we can use higher-order functions to capture common patterns of usage,
 - we can model local state using assignment and data mutation
 - we can link parts of a program with
-streams and delayed evaluation, and we caneasily implement embedded
+streams and delayed evaluation, and we can easily implement embedded
 languages.
