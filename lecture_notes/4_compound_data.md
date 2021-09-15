@@ -8,6 +8,7 @@ to provide additional layers of abstractions.
 
 For example we may have a data structure to represent rational number
 and this can be built in the following way:
+
 ```scheme
 ; basic functions related to our data type (only the signature is reported)
 
@@ -104,7 +105,7 @@ are performed, we still have a functioning system.
 
 One important concept when we talk about means of combinations is the
 concept of **closure** (note this at the moment is not the same as far as I
-know as the concept of closure in Functional Programming).
+know to the concept of closure in Functional Programming).
 
 This means that if a mean of combination (e.g., `cons`) produces things
 which can be combined again and again (infinitely) with the same
@@ -160,3 +161,7 @@ NOTE:
 An important thing is that we have to stop thinking about procedures
 only as the act of doing something! **Procedures are conceptual entities,
 and can be thought of as objects**.
+
+We don't need data at all to build data abstractions, we can build
+everything starting from procedures.
+

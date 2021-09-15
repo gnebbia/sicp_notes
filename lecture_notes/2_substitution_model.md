@@ -104,7 +104,7 @@ Applicative Order:
 ```
 
 In Applicative Order, you would evaluate the parameter x, before you
-go the body of square, which is (* x x). When you evaluate (+ 3 2),
+go the body of square, which is `(* x x)`. When you evaluate (+ 3 2),
 you get 5 and this is what you pass into square. So x is bound to 5.
 
 Normal Order:
@@ -135,7 +135,7 @@ the result of an applied substitution model.
 
 # Peano Arithmetic Sum v1 (Iterative Process)
 
- ```scm
+ ```scheme
 (define (+ x y)
     (if (= x 0)
         y
@@ -154,7 +154,7 @@ Its substitution model for the procedure call `(+ 3 4)` is:
 
 
 # Peano Arithmetic Sum v2 (Recursive Process)
- ```scm
+ ```scheme
 (define (+ x y)
     (if (= x 0)
         y
