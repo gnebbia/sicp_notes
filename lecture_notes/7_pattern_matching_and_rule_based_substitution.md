@@ -24,10 +24,12 @@ All rules are composed like this:
 - A target expression is what we obtain once a rule is applied and 
   we instantiate the skeleton;
 
-A rule is something that allows to produce a skeleton when a certain
-pattern matches.  The result of the application of the rule is to produce
-a new expression which is the Target Expression by the instantiation of
-the skeleton.
+A "Rule" is something that allows to produce a skeleton when a certain
+"Pattern" matches.  A "Pattern" is matched against a "Source Expression".
+The result of the application of the rule is to produce a new expression
+which is the "Target Expression", produced by the "Instantiation" of the
+"Skeleton".
 
+NOTE: Each rule is composed by a pattern and a skeleton.
 
 
