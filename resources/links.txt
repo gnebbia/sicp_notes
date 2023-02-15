@@ -3,6 +3,9 @@ https://billthelizard.blogspot.com/2011/07/sicp-lecture-3a-henderson-escher.html
 https://www.youtube.com/watch?v=OyfBQmvr2Hc (William Byrd, The most Beautiful Program Ever Written)
 https://github.com/AndrewMagerman/wizard-book-study
 
+https://sicp-solutions.net/
+http://community.schemewiki.org/cgi-bin/scheme.cgi?sicp-ex-2.35
+
 
 Discord Channel on a study group
 https://discord.com/channels/731931842818867243/935223342993129502
