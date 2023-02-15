@@ -1,6 +1,11 @@
 https://berkeley-cs61as.github.io/textbook.html (alternative modern berkeley course textbook)
 https://billthelizard.blogspot.com/2011/07/sicp-lecture-3a-henderson-escher.html (notes and explanations of SICP lectures)
 https://www.youtube.com/watch?v=OyfBQmvr2Hc (William Byrd, The most Beautiful Program Ever Written)
+https://github.com/AndrewMagerman/wizard-book-study
+
+
+Discord Channel on a study group
+https://discord.com/channels/731931842818867243/935223342993129502
 
 - The Little Schemer by Daniel P. Friedman and Matthias Felleisen 
 - Essentials of Programming Languages by Daniel P. Friedman and Mitchell Wand 
